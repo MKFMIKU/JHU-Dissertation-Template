@@ -1,10 +1,58 @@
-\chapter{Chapter title goes here} \label{chap:chap-1}
+\chapter{Introduction and Background} \label{chap:chap-1}
 
-% if you want a short header you can use the following command
-% \chapter[short-header-name]{chapter-title} \label{chap:chap-1}
+\section{Diffusion Models}
+\paragraph{Diffusion Models.} A diffusion model~\cite{song2020score, ho2020denoising} has latent variables $\{\bz_t | t \in [0, T]\}$ specified by a noise schedule comprising differentiable functions $\{\alpha_t, \sigma_t\}$ with $\sigma^2_t = 1 - \alpha^2_t$.
+% The forward process defined in the following Markovian structure that progressively perturbing data $\bx \sim p_\mathrm{data}(\bx)$ via Gaussian process is:
+The clean data $\bx \sim p_\mathrm{data}$ is progressively perturbed in a (forward) Gaussian process as in the following Markovian structure:
+\begin{align}
+    q(\bz_t | \bx)& = \mathcal{N}(\bz_t; \alpha_t \bx, \sigma_t^2 \mathbf{I}), \\
+    % \mathrm{and}~ 
+    q(\bz_t | \bz_s)& = \mathcal{N}(\bz_t; \alpha_{t|s}\bz_s, \sigma^2_{t|s}\mathbf{I}),
+    \label{eq:forward}
+\end{align}
+where $0 \leq s < t \leq 1$ and $\alpha^2_{t|s} = \alpha_t / \alpha_s$.
+Here the latent $\bz_t$ is sampled from the combination of the clean data and random noise by using the reparameterization trick~\cite{kingma2013auto}, which has $\bz_t = \alpha_t\bx + \sigma_t \epsilon$.
 
+\paragraph{Deterministic sampling.}
+The aforementioned diffusion process that starts from $\bz_0 \sim p_{\mathrm{data}}(\bx)$ and ends at $\bz_T \sim \mathcal{N}(0, \mathbf{I})$ can be modeled as the solution of an stochastic differential equation (SDE)~\cite{song2020score}. The SDE is formed by a vector-value function $f(\cdot, \cdot): \mathbb{R}^d \to \mathbb{R}^d$, a scalar function $g(\cdot): \mathbb{R} \to \mathbb{R}$, and the standard Wiener process $\bw$ as:
+\begin{equation}
+    \mathrm{d} \bz_t = f(\bz_t, t)\mathrm{d}t + g(t) \mathrm{d} \bw.
+\end{equation}
+The overall idea is that the reverse-time SDE that runs backwards in time, can generate samples of $p_\mathrm{data}$ from the prior distribution $\mathcal{N}(0, \mathbf{I})$. This reverse SDE is given by
+\begin{equation}
+    \mathrm{d} \bz_t =  [f(\bz_t, t) - g(t)^2 \nabla_{\bz} \log p_t(\bz_t)]\mathrm{d} t + g(t) \mathrm{d} \bar{\bw},
+    \label{eq:sde}
+\end{equation}
+where the $\bar{\bw}$ is a also standard Wiener process in reversed time, and $\nabla_\bz \log p_t(\bz_t)$ is the score of the marginal distribution at time $t$. The score function can be estimated by training a score-based model $s_\theta( \bz_t, t) \approx \nabla_z \log p_t (\bz_t)$ with score-matching~\cite{song2020sliced} or a denoising network $\hat{\bx}_\theta(\bz_t, t)$~\cite{ho2020denoising}:
+\begin{equation}
+    s_\theta(\bz_t,t) := (\alpha_t \hat{\bx}_\theta(\bz_t,t) - \bz_t) / \sigma^2_t.
+    \label{eq:scorem}
+\end{equation}
+%
+Such backward SDE satisfies a special ordinary differential equation (ODE) that allows deterministic sampling given $\bz_T \sim \mathcal{N}(0, \mathbf{I})$. This is known as the \emph{probability flow} (PF) ODE~\cite{song2020score} and is given by
+\begin{equation}
+    \mathrm{d} \bz_t = [f(\bz_t, t) - \frac{1}{2}g^2(t) s_\theta(\bz_t,t)] \mathrm{d}t,
+    \label{eq:pfode}
+\end{equation}
+where $f(\bz_t, t) = \frac{\mathrm{d} \log \alpha_t}{\mathrm{d} t} \bz_t$, $g^2(t) = \frac{\mathrm{d} \sigma_t^2}{\mathrm{d} t} - 2\frac{\mathrm{d} \log \alpha_t}{\mathrm{d} t}\sigma^2_t$ with respect to $\{\alpha_t, \sigma_t\}$ and $t$ according to \cite{kingma2021variational}.
+This ODE can be solved numerically with diffusion samplers like DDIM~\cite{song2020denoising}, where starting from $\hat{\bz}_T \sim \mathcal{N}(0, \mathbf{I})$, we update for $s=t-\Delta t$:
+\begin{equation}
+    \hat{\bz}_s := \alpha_s \hat{\bx}_\theta(\hat{\bz}_t, t) + \sigma_s (\hat{\bz}_t - \alpha_t \hat{\bx}_\theta (\hat{\bz}_t, t)) / \sigma_t,
+    \label{eq:ddim}
+\end{equation}
+till we reach $\hat{\bz}_0$.
 
-%% add your chapter text here
-\blindtext \cite{dirac}
-
-\Blindtext[3]
+\paragraph{Diffusion models parametrizations.}
+Leaving aside the aforementioned way of parametrizing diffusion models with a denoising network (signal prediction) or a score model (noise prediction~\eqref{eq:scorem}), in this work, we adopt a parameterization that mixes both the score (or noise) and the signal prediction. %targeting at improving conditional distillation with their inherit correlations.
+%
+Existing methods include either predicting the noise $\hat{\epsilon}_\theta(\bx_t,t)$ and the signal $\hat{\bx}_\theta(\bz_t,t)$ separately using a single network~\cite{dhariwal2021diffusion}, or predicting a combination of noise and signal by expressing them in a new term, like the velocity model $\hat{\bv}_\theta (\bz_t, t) \approx \alpha_t \epsilon - \sigma_t \bx$~\cite{salimans2022progressive}.
+Note that one can derive an estimation of the signal and the noise from the velocity one,
+\begin{equation}
+    \hat{\bx} = \alpha_t \bz_t - \sigma_t \hat{\bv}_\theta (\bz_t, t), \, \mathrm{and}\,\,\, \hat{\epsilon} = \alpha_t \hat{\bv}_\theta (\bz_t, t)  + \sigma_t \bz_t.
+    \label{eq:v}
+\end{equation}
+Similarly, DDIM update rule (\eqref{eq:ddim}) can be rewritten in terms of the velocity parametrization:
+\begin{equation}
+        \hat{\bz}_s := \alpha_s (\alpha_t \hat{\bz}_t - \sigma_t \hat{\bv}_\theta (\hat{\bz}_t, t)) + \sigma_s (\alpha_t \hat{\bv}_\theta (\hat{\bz}_t, t)  + \sigma_t \hat{\bz}_t).
+    \label{eq:vddim}
+\end{equation}

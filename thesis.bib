@@ -1,71 +1,737 @@
-%%%% this sample bibliography has been taken from Overleaf
+@String(PAMI = {IEEE Trans. Pattern Anal. Mach. Intell.})
+@String(IJCV = {Int. J. Comput. Vis.})
+@String(CVPR= {IEEE Conf. Comput. Vis. Pattern Recog.})
+@String(ICCV= {Int. Conf. Comput. Vis.})
+@String(ECCV= {Eur. Conf. Comput. Vis.})
+@String(NIPS= {Adv. Neural Inform. Process. Syst.})
+@String(ICPR = {Int. Conf. Pattern Recog.})
+@String(BMVC= {Brit. Mach. Vis. Conf.})
+@String(TOG= {ACM Trans. Graph.})
+@String(TIP  = {IEEE Trans. Image Process.})
+@String(TVCG  = {IEEE Trans. Vis. Comput. Graph.})
+@String(TMM  = {IEEE Trans. Multimedia})
+@String(ACMMM= {ACM Int. Conf. Multimedia})
+@String(ICME = {Int. Conf. Multimedia and Expo})
+@String(ICASSP=	{ICASSP})
+@String(ICIP = {IEEE Int. Conf. Image Process.})
+@String(ACCV  = {ACCV})
+@String(ICLR = {Int. Conf. Learn. Represent.})
+@String(IJCAI = {IJCAI})
+@String(PR   = {Pattern Recognition})
+@String(AAAI = {AAAI})
+@String(CVPRW= {IEEE Conf. Comput. Vis. Pattern Recog. Worksh.})
+@String(CSVT = {IEEE Trans. Circuit Syst. Video Technol.})
 
-@article{einstein,
-  author =       "Albert Einstein",
-  title =        "{Zur Elektrodynamik bewegter K{\"o}rper}. ({German})
-                 [{On} the electrodynamics of moving bodies]",
-  journal =      "Annalen der Physik",
-  volume =       "322",
-  number =       "10",
-  pages =        "891--921",
-  year =         "1905",
-  DOI =          "http://dx.doi.org/10.1002/andp.19053221004",
-  keywords =     "physics"
+@String(SPL	= {IEEE Sign. Process. Letters})
+@String(VR   = {Vis. Res.})
+@String(JOV	 = {J. Vis.})
+@String(TVC  = {The Vis. Comput.})
+@String(JCST  = {J. Comput. Sci. Tech.})
+@String(CGF  = {Comput. Graph. Forum})
+@String(CVM = {Computational Visual Media})
+
+
+@String(PAMI  = {IEEE TPAMI})
+@String(IJCV  = {IJCV})
+@String(CVPR  = {CVPR})
+@String(ICCV  = {ICCV})
+@String(ECCV  = {ECCV})
+@String(NIPS  = {NeurIPS})
+@String(ICPR  = {ICPR})
+@String(BMVC  =	{BMVC})
+@String(TOG   = {ACM TOG})
+@String(TIP   = {IEEE TIP})
+@String(TVCG  = {IEEE TVCG})
+@String(TCSVT = {IEEE TCSVT})
+@String(TMM   =	{IEEE TMM})
+@String(ACMMM = {ACM MM})
+@String(ICME  =	{ICME})
+@String(ICASSP=	{ICASSP})
+@String(ICIP  = {ICIP})
+@String(ACCV  = {ACCV})
+@String(ICLR  = {ICLR})
+@String(IJCAI = {IJCAI})
+@String(PR = {PR})
+@String(AAAI = {AAAI})
+@String(CVPRW= {CVPRW})
+@String(CSVT = {IEEE TCSVT})
+
+@inproceedings{ho2020denoising,
+    author = {Jonathan Ho and
+Ajay Jain and
+Pieter Abbeel},
+    booktitle = {Advances in Neural Information Processing Systems 33: Annual Conference
+on Neural Information Processing Systems 2020, NeurIPS 2020, December
+6-12, 2020, virtual},
+    editor = {Hugo Larochelle and
+Marc'Aurelio Ranzato and
+Raia Hadsell and
+Maria{-}Florina Balcan and
+Hsuan{-}Tien Lin},
+    timestamp = {Tue, 19 Jan 2021 00:00:00 +0100},
+    title = {Denoising Diffusion Probabilistic Models},
+    year = {2020}
 }
 
-@book{dirac,
-  title={The Principles of Quantum Mechanics},
-  author={Paul Adrien Maurice Dirac},
-  isbn={9780198520115},
-  series={International series of monographs on physics},
-  year={1981},
-  publisher={Clarendon Press},
-  keywords = {physics}
+@inproceedings{nichol2021improved,
+    author = {Alexander Quinn Nichol and
+Prafulla Dhariwal},
+    booktitle = {Proceedings of the 38th International Conference on Machine Learning,
+{ICML} 2021, 18-24 July 2021, Virtual Event},
+    editor = {Marina Meila and
+Tong Zhang},
+    series = {Proceedings of Machine Learning Research},
+    timestamp = {Wed, 25 Aug 2021 01:00:00 +0200},
+    title = {Improved Denoising Diffusion Probabilistic Models},
+    year = {2021}
 }
 
-@book{latexcompanion,
-    author    = "Michel Goossens and Frank Mittelbach and Alexander Samarin",
-    title     = "The \LaTeX\ Companion",
-    year      = "1993",
-    publisher = "Addison-Wesley",
-    address   = "Reading, Massachusetts",
-    keywords  = "latex"
-}
- 
-@online{knuthwebsite,
-    author    = "Donald Knuth",
-    title     = "Knuth: Computers and Typesetting",
-    url       = "http://www-cs-faculty.stanford.edu/~uno/abcde.html",
-    addendum = "(accessed: 01.09.2016)",
-    keywords  = "latex,knuth"
-}
-
-@inbook{knuth-fa,
-   author = "Donald E. Knuth",
-   title = "Fundamental Algorithms",
-   publisher = "Addison-Wesley",
-   year = "1973",
-   chapter = "1.2",
-   keywords  = "knuth,programming"
+@inproceedings{dhariwal2021diffusion,
+    author = {Prafulla Dhariwal and
+Alexander Quinn Nichol},
+    booktitle = {Advances in Neural Information Processing Systems 34: Annual Conference
+on Neural Information Processing Systems 2021, NeurIPS 2021, December
+6-14, 2021, virtual},
+    editor = {Marc'Aurelio Ranzato and
+Alina Beygelzimer and
+Yann N. Dauphin and
+Percy Liang and
+Jennifer Wortman Vaughan},
+    timestamp = {Tue, 03 May 2022 01:00:00 +0200},
+    title = {Diffusion Models Beat GANs on Image Synthesis},
+    year = {2021}
 }
 
-@book{knuth-acp,
-   author = "Donald E. Knuth",
-   publisher = "Addison-Wesley",
-   title = "The Art of Computer Programming",
-   series = "Four volumes",
-   year = "1968",
-   note = "Seven volumes planned",
-   keywords  = "knuth,programming"
+@inproceedings{gu2022vector,
+    author = {Shuyang Gu and
+Dong Chen and
+Jianmin Bao and
+Fang Wen and
+Bo Zhang and
+Dongdong Chen and
+Lu Yuan and
+Baining Guo},
+    booktitle = {{IEEE/CVF} Conference on Computer Vision and Pattern Recognition,
+{CVPR} 2022, New Orleans, LA, USA, June 18-24, 2022},
+    timestamp = {Tue, 08 Nov 2022 00:00:00 +0100},
+    title = {Vector Quantized Diffusion Model for Text-to-Image Synthesis},
+    year = {2022}
 }
 
-@article{ctan,
-    author  = "George D. Greenwade",
-    title   = "The {C}omprehensive {T}ex {A}rchive {N}etwork ({CTAN})",
-    year    = "1993",
-    journal = "TUGBoat",
-    volume  = "14",
-    number  = "3",
-    pages   = "342--351",
-    keywords  = "latex"
+@inproceedings{salimans2022progressive,
+    author = {Tim Salimans and
+Jonathan Ho},
+    booktitle = {The Tenth International Conference on Learning Representations, {ICLR}
+2022, Virtual Event, April 25-29, 2022},
+    timestamp = {Sat, 20 Aug 2022 01:00:00 +0200},
+    title = {Progressive Distillation for Fast Sampling of Diffusion Models},
+    year = {2022}
+}
+
+@inproceedings{rombach2022high,
+    author = {Rombach, Robin and Blattmann, Andreas and Lorenz, Dominik and Esser, Patrick and Ommer, Bj{\"o}rn},
+    booktitle = {Proceedings of the IEEE/CVF conference on computer vision and pattern recognition},
+    title = {High-resolution image synthesis with latent diffusion models},
+    year = {2022}
+}
+
+@article{schuhmann2022laion,
+    author = {Schuhmann, Christoph and Beaumont, Romain and Vencu, Richard and Gordon, Cade and Wightman, Ross and Cherti, Mehdi and Coombes, Theo and Katta, Aarush and Mullis, Clayton and Wortsman, Mitchell and others},
+    journal = {Advances in Neural Information Processing Systems},
+    title = {Laion-5b: An open large-scale dataset for training next generation image-text models},
+    year = {2022}
+}
+
+@article{saharia2022photorealistic,
+    author = {Saharia, Chitwan and Chan, William and Saxena, Saurabh and Li, Lala and Whang, Jay and Denton, Emily L and Ghasemipour, Kamyar and Gontijo Lopes, Raphael and Karagol Ayan, Burcu and Salimans, Tim and others},
+    journal = {Advances in Neural Information Processing Systems},
+    title = {Photorealistic text-to-image diffusion models with deep language understanding},
+    year = {2022}
+}
+
+@article{ramesh2022hierarchical,
+    author = {Ramesh, Aditya and Dhariwal, Prafulla and Nichol, Alex and Chu, Casey and Chen, Mark},
+    journal = {ArXiv preprint},
+    title = {Hierarchical text-conditional image generation with clip latents},
+    year = {2022}
+}
+
+@inproceedings{lin2014microsoft,
+    author = {Lin, Tsung-Yi and Maire, Michael and Belongie, Serge and Hays, James and Perona, Pietro and Ramanan, Deva and Doll{\'a}r, Piotr and Zitnick, C Lawrence},
+    booktitle = {ECCV},
+    title = {Microsoft coco: Common objects in context},
+    year = {2014}
+}
+
+@inproceedings{zhang2023adding,
+  title={Adding conditional control to text-to-image diffusion models},
+  author={Zhang, Lvmin and Rao, Anyi and Agrawala, Maneesh},
+  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
+  pages={3836--3847},
+  year={2023}
+}
+
+@article{mou2023t2i,
+    author = {Mou, Chong and Wang, Xintao and Xie, Liangbin and Zhang, Jian and Qi, Zhongang and Shan, Ying and Qie, Xiaohu},
+    journal = {ArXiv preprint},
+    title = {T2i-adapter: Learning adapters to dig out more controllable ability for text-to-image diffusion models},
+    year = {2023}
+}
+
+@article{wang2023exploiting,
+    author = {Wang, Jianyi and Yue, Zongsheng and Zhou, Shangchen and Chan, Kelvin CK and Loy, Chen Change},
+    journal = {ArXiv preprint},
+    title = {Exploiting Diffusion Prior for Real-World Image Super-Resolution},
+    year = {2023}
+}
+
+@inproceedings{brooks2023instructpix2pix,
+    author = {Brooks, Tim and Holynski, Aleksander and Efros, Alexei A},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+    title = {Instructpix2pix: Learning to follow image editing instructions},
+    year = {2023}
+}
+
+@inproceedings{song2020score,
+    author = {Yang Song and
+Jascha Sohl{-}Dickstein and
+Diederik P. Kingma and
+Abhishek Kumar and
+Stefano Ermon and
+Ben Poole},
+    booktitle = {9th International Conference on Learning Representations, {ICLR} 2021,
+Virtual Event, Austria, May 3-7, 2021},
+    timestamp = {Wed, 23 Jun 2021 01:00:00 +0200},
+    title = {Score-Based Generative Modeling through Stochastic Differential Equations},
+    year = {2021}
+}
+
+@article{karras2022elucidating,
+    author = {Karras, Tero and Aittala, Miika and Aila, Timo and Laine, Samuli},
+    journal = {Advances in Neural Information Processing Systems},
+    title = {Elucidating the design space of diffusion-based generative models},
+    year = {2022}
+}
+
+@article{song2023consistency,
+    author = {Song, Yang and Dhariwal, Prafulla and Chen, Mark and Sutskever, Ilya},
+    journal = {ICML},
+    title = {Consistency Models},
+    year = {2023}
+}
+
+@inproceedings{meng2023distillation,
+    author = {Meng, Chenlin and Rombach, Robin and Gao, Ruiqi and Kingma, Diederik and Ermon, Stefano and Ho, Jonathan and Salimans, Tim},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+    title = {On distillation of guided diffusion models},
+    year = {2023}
+}
+
+@article{dong2015image,
+    author = {Dong, Chao and Loy, Chen Change and He, Kaiming and Tang, Xiaoou},
+    journal = {IEEE transactions on pattern analysis and machine intelligence},
+    number = {2},
+    title = {Image super-resolution using deep convolutional networks},
+    year = {2015}
+}
+
+@inproceedings{patashnik2021styleclip,
+    author = {Or Patashnik and
+Zongze Wu and
+Eli Shechtman and
+Daniel Cohen{-}Or and
+Dani Lischinski},
+    booktitle = {2021 {IEEE/CVF} International Conference on Computer Vision, {ICCV}
+2021, Montreal, QC, Canada, October 10-17, 2021},
+    timestamp = {Fri, 11 Mar 2022 00:00:00 +0100},
+    title = {StyleCLIP: Text-Driven Manipulation of StyleGAN Imagery},
+    year = {2021}
+}
+
+@inproceedings{lugmayr2022repaint,
+    author = {Lugmayr, Andreas and Danelljan, Martin and Romero, Andres and Yu, Fisher and Timofte, Radu and Van Gool, Luc},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+    title = {Repaint: Inpainting using denoising diffusion probabilistic models},
+    year = {2022}
+}
+
+@article{luhman2021knowledge,
+    author = {Luhman, Eric and Luhman, Troy},
+    journal = {ArXiv preprint},
+    title = {Knowledge distillation in iterative generative models for improved sampling speed},
+    year = {2021}
+}
+
+@inproceedings{hu2021lora,
+    author = {Edward J. Hu and
+Yelong Shen and
+Phillip Wallis and
+Zeyuan Allen{-}Zhu and
+Yuanzhi Li and
+Shean Wang and
+Lu Wang and
+Weizhu Chen},
+    booktitle = {The Tenth International Conference on Learning Representations, {ICLR}
+2022, Virtual Event, April 25-29, 2022},
+    timestamp = {Sat, 20 Aug 2022 01:00:00 +0200},
+    title = {LoRA: Low-Rank Adaptation of Large Language Models},
+    year = {2022}
+}
+
+@article{hinton2015distilling,
+    author = {Hinton, Geoffrey and Vinyals, Oriol and Dean, Jeff},
+    journal = {ArXiv preprint},
+    title = {Distilling the knowledge in a neural network},
+    year = {2015}
+}
+
+@article{chung2022diffusion,
+    author = {Chung, Hyungjin and Kim, Jeongsol and Mccann, Michael T and Klasky, Marc L and Ye, Jong Chul},
+    journal = {ArXiv preprint},
+    title = {Diffusion posterior sampling for general noisy inverse problems},
+    year = {2022}
+}
+
+@article{gao2017bounds,
+    author = {Gao, Xiang and Sitharam, Meera and Roitberg, Adrian E},
+    journal = {ArXiv preprint},
+    title = {Bounds on the Jensen gap, and implications for mean-concentrated distributions},
+    year = {2017}
+}
+
+@article{simic2008global,
+    author = {Simic, Slavko},
+    journal = {Journal of mathematical analysis and applications},
+    number = {1},
+    title = {On a global upper bound for Jensen's inequality},
+    year = {2008}
+}
+
+@inproceedings{wang2021real,
+    author = {Xintao Wang and
+Liangbin Xie and
+Chao Dong and
+Ying Shan},
+    booktitle = {{IEEE/CVF} International Conference on Computer Vision Workshops,
+{ICCVW} 2021, Montreal, BC, Canada, October 11-17, 2021},
+    timestamp = {Fri, 03 Dec 2021 00:00:00 +0100},
+    title = {Real-ESRGAN: Training Real-World Blind Super-Resolution with Pure
+Synthetic Data},
+    year = {2021}
+}
+
+@inproceedings{ji2020real,
+    author = {Ji, Xiaozhong and Cao, Yun and Tai, Ying and Wang, Chengjie and Li, Jilin and Huang, Feiyue},
+    booktitle = {proceedings of the IEEE/CVF conference on computer vision and pattern recognition workshops},
+    title = {Real-world super-resolution via kernel estimation and noise injection},
+    year = {2020}
+}
+
+@article{zhang2021blind,
+    author = {Zhang, Jiahui and Lu, Shijian and Zhan, Fangneng and Yu, Yingchen},
+    journal = {ArXiv preprint},
+    title = {Blind image super-resolution via contrastive representation learning},
+    year = {2021}
+}
+
+@inproceedings{liang2022efficient,
+    author = {Liang, Jie and Zeng, Hui and Zhang, Lei},
+    booktitle = {European Conference on Computer Vision},
+    organization = {Springer},
+    title = {Efficient and degradation-adaptive network for real-world image super-resolution},
+    year = {2022}
+}
+
+@article{wang2022realesrgan,
+    author = {Wang, Xintao and Xie, Liangbin and Dong, Chao and Shan, Ying},
+    journal = {Computer Vision Foundation open access},
+    title = {Realesrgan: Training real-world blind super-resolution with pure synthetic data supplementary material},
+    year = {2022}
+}
+
+@inproceedings{chen2022real,
+    author = {Chen, Chaofeng and Shi, Xinyu and Qin, Yipeng and Li, Xiaoming and Han, Xiaoguang and Yang, Tao and Guo, Shihui},
+    booktitle = {Proceedings of the 30th ACM International Conference on Multimedia},
+    title = {Real-world blind super-resolution via feature matching with implicit high-resolution priors},
+    year = {2022}
+}
+
+@inproceedings{song2020denoising,
+    author = {Jiaming Song and
+Chenlin Meng and
+Stefano Ermon},
+    booktitle = {9th International Conference on Learning Representations, {ICLR} 2021,
+Virtual Event, Austria, May 3-7, 2021},
+    timestamp = {Wed, 23 Jun 2021 01:00:00 +0200},
+    title = {Denoising Diffusion Implicit Models},
+    year = {2021}
+}
+
+@article{zhang2018ffdnet,
+    author = {Zhang, Kai and Zuo, Wangmeng and Zhang, Lei},
+    journal = {IEEE Transactions on Image Processing},
+    number = {9},
+    title = {FFDNet: Toward a fast and flexible solution for CNN-based image denoising},
+    year = {2018}
+}
+
+@inproceedings{sohl2015deep,
+    author = {Jascha Sohl{-}Dickstein and
+Eric A. Weiss and
+Niru Maheswaranathan and
+Surya Ganguli},
+    booktitle = {Proceedings of the 32nd International Conference on Machine Learning,
+{ICML} 2015, Lille, France, 6-11 July 2015},
+    editor = {Francis R. Bach and
+David M. Blei},
+    series = {{JMLR} Workshop and Conference Proceedings},
+    timestamp = {Wed, 29 May 2019 01:00:00 +0200},
+    title = {Deep Unsupervised Learning using Nonequilibrium Thermodynamics},
+    year = {2015}
+}
+
+@article{kingma2021variational,
+    author = {Kingma, Diederik and Salimans, Tim and Poole, Ben and Ho, Jonathan},
+    journal = {Advances in neural information processing systems},
+    title = {Variational diffusion models},
+    year = {2021}
+}
+
+@article{delbracio2023inversion,
+    author = {Mauricio Delbracio and Peyman Milanfar},
+    issn = {2835-8856},
+    journal = {Transactions on Machine Learning Research},
+    note = {Featured Certification},
+    title = {Inversion by Direct Iteration: An Alternative to Denoising Diffusion for Image Restoration},
+    year = {2023}
+}
+
+@inproceedings{saharia2022palette,
+    author = {Saharia, Chitwan and Chan, William and Chang, Huiwen and Lee, Chris and Ho, Jonathan and Salimans, Tim and Fleet, David and Norouzi, Mohammad},
+    booktitle = {ACM SIGGRAPH 2022 Conference Proceedings},
+    title = {Palette: Image-to-image diffusion models},
+    year = {2022}
+}
+
+@article{saharia2022image,
+    author = {Saharia, Chitwan and Ho, Jonathan and Chan, William and Salimans, Tim and Fleet, David J and Norouzi, Mohammad},
+    journal = {IEEE Transactions on Pattern Analysis and Machine Intelligence},
+    number = {4},
+    title = {Image super-resolution via iterative refinement},
+    year = {2022}
+}
+
+@inproceedings{kingma2013auto,
+    author = {Diederik P. Kingma and
+Max Welling},
+    booktitle = {2nd International Conference on Learning Representations, {ICLR} 2014,
+Banff, AB, Canada, April 14-16, 2014, Conference Track Proceedings},
+    editor = {Yoshua Bengio and
+Yann LeCun},
+    timestamp = {Fri, 29 Mar 2019 00:00:00 +0100},
+    title = {Auto-Encoding Variational Bayes},
+    year = {2014}
+}
+
+@inproceedings{song2020sliced,
+    author = {Yang Song and
+Sahaj Garg and
+Jiaxin Shi and
+Stefano Ermon},
+    booktitle = {Proceedings of the Thirty-Fifth Conference on Uncertainty in Artificial
+Intelligence, {UAI} 2019, Tel Aviv, Israel, July 22-25, 2019},
+    editor = {Amir Globerson and
+Ricardo Silva},
+    series = {Proceedings of Machine Learning Research},
+    timestamp = {Tue, 15 Dec 2020 00:00:00 +0100},
+    title = {Sliced Score Matching: {A} Scalable Approach to Density and Score
+Estimation},
+    year = {2019}
+}
+
+@article{lu2022dpm,
+    author = {Lu, Cheng and Zhou, Yuhao and Bao, Fan and Chen, Jianfei and Li, Chongxuan and Zhu, Jun},
+    journal = {Advances in Neural Information Processing Systems},
+    title = {Dpm-solver: A fast ode solver for diffusion probabilistic model sampling in around 10 steps},
+    year = {2022}
+}
+
+@article{lu2022dpm2,
+    author = {Lu, Cheng and Zhou, Yuhao and Bao, Fan and Chen, Jianfei and Li, Chongxuan and Zhu, Jun},
+    journal = {ArXiv preprint},
+    title = {Dpm-solver++: Fast solver for guided sampling of diffusion probabilistic models},
+    year = {2022}
+}
+
+@article{li2023snapfusion,
+    author = {Li, Yanyu and Wang, Huan and Jin, Qing and Hu, Ju and Chemerys, Pavlo and Fu, Yun and Wang, Yanzhi and Tulyakov, Sergey and Ren, Jian},
+    journal = {NeurIPS},
+    title = {SnapFusion: Text-to-Image Diffusion Model on Mobile Devices within Two Seconds},
+    year = {2023}
+}
+
+@misc{ryu2023low,
+    author = {Ryu, Simo},
+    title = {Low-rank adaptation for fast text-to-image diffusion fine-tuning},
+    year = {2023}
+}
+
+@article{rostamzadeh2021ethics,
+    author = {Rostamzadeh, Negar and Denton, Emily and Petrini, Linda},
+    journal = {ArXiv preprint},
+    title = {Ethics and creativity in computer vision},
+    year = {2021}
+}
+
+@inproceedings{meng2021sdedit,
+    author = {Chenlin Meng and
+Yutong He and
+Yang Song and
+Jiaming Song and
+Jiajun Wu and
+Jun{-}Yan Zhu and
+Stefano Ermon},
+    booktitle = {The Tenth International Conference on Learning Representations, {ICLR}
+2022, Virtual Event, April 25-29, 2022},
+    timestamp = {Wed, 22 Mar 2023 00:00:00 +0100},
+    title = {SDEdit: Guided Image Synthesis and Editing with Stochastic Differential
+Equations},
+    year = {2022}
+}
+
+@article{russakovsky2015imagenet,
+    author = {Russakovsky, Olga and Deng, Jia and Su, Hao and Krause, Jonathan and Satheesh, Sanjeev and Ma, Sean and Huang, Zhiheng and Karpathy, Andrej and Khosla, Aditya and Bernstein, Michael and others},
+    journal = {International journal of computer vision},
+    title = {Imagenet large scale visual recognition challenge},
+    year = {2015}
+}
+
+@article{song2023improved,
+    author = {Song, Yang and Dhariwal, Prafulla},
+    journal = {ArXiv preprint},
+    title = {Improved Techniques for Training Consistency Models},
+    year = {2023}
+}
+
+@article{kim2023consistency,
+    author = {Kim, Dongjun and Lai, Chieh-Hsin and Liao, Wei-Hsiang and Murata, Naoki and Takida, Yuhta and Uesaka, Toshimitsu and He, Yutong and Mitsufuji, Yuki and Ermon, Stefano},
+    journal = {ArXiv preprint},
+    title = {Consistency Trajectory Models: Learning Probability Flow ODE Trajectory of Diffusion},
+    year = {2023}
+}
+
+@inproceedings{ruiz2023dreambooth,
+    author = {Ruiz, Nataniel and Li, Yuanzhen and Jampani, Varun and Pritch, Yael and Rubinstein, Michael and Aberman, Kfir},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+    title = {Dreambooth: Fine tuning text-to-image diffusion models for subject-driven generation},
+    year = {2023}
+}
+
+@inproceedings{liu2023zero,
+    author = {Liu, Ruoshi and Wu, Rundi and Van Hoorick, Basile and Tokmakov, Pavel and Zakharov, Sergey and Vondrick, Carl},
+    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision},
+    title = {Zero-1-to-3: Zero-shot one image to 3d object},
+    year = {2023}
+}
+
+@inproceedings{parmar2023zero,
+    author = {Parmar, Gaurav and Kumar Singh, Krishna and Zhang, Richard and Li, Yijun and Lu, Jingwan and Zhu, Jun-Yan},
+    booktitle = {ACM SIGGRAPH 2023 Conference Proceedings},
+    title = {Zero-shot image-to-image translation},
+    year = {2023}
+}
+
+@article{xu2023restart,
+    author = {Xu, Yilun and Deng, Mingyang and Cheng, Xiang and Tian, Yonglong and Liu, Ziming and Jaakkola, Tommi},
+    journal = {ArXiv preprint},
+    title = {Restart Sampling for Improving Generative Processes},
+    year = {2023}
+}
+
+@inproceedings{zheng2023fast,
+    author = {Zheng, Hongkai and Nie, Weili and Vahdat, Arash and Azizzadenesheli, Kamyar and Anandkumar, Anima},
+    booktitle = {International Conference on Machine Learning},
+    organization = {PMLR},
+    title = {Fast sampling of diffusion models via operator learning},
+    year = {2023}
+}
+
+@article{liu2022flow,
+    author = {Liu, Xingchao and Gong, Chengyue and Liu, Qiang},
+    journal = {ArXiv preprint},
+    title = {Flow straight and fast: Learning to generate and transfer data with rectified flow},
+    year = {2022}
+}
+
+@inproceedings{gu2023boot,
+    author = {Gu, Jiatao and Zhai, Shuangfei and Zhang, Yizhe and Liu, Lingjie and Susskind, Joshua M},
+    booktitle = {ICML 2023 Workshop on Structured Probabilistic Inference $\{$$\backslash$\&$\}$ Generative Modeling},
+    title = {Boot: Data-free distillation of denoising diffusion models with bootstrapping},
+    year = {2023}
+}
+
+@inproceedings{lu2023cm,
+    author = {Lu, Haoye and Lu, Yiwei and Jiang, Dihong and Szabados, Spencer Ryan and Sun, Sun and Yu, Yaoliang},
+    booktitle = {ICML 2023 Workshop on Structured Probabilistic Inference $\{$$\backslash$\&$\}$ Generative Modeling},
+    title = {CM-GAN: Stabilizing GAN Training with Consistency Models},
+    year = {2023}
+}
+
+@inproceedings{houlsby2019parameter,
+    author = {Neil Houlsby and
+Andrei Giurgiu and
+Stanislaw Jastrzebski and
+Bruna Morrone and
+Quentin de Laroussilhe and
+Andrea Gesmundo and
+Mona Attariyan and
+Sylvain Gelly},
+    booktitle = {Proceedings of the 36th International Conference on Machine Learning,
+{ICML} 2019, 9-15 June 2019, Long Beach, California, {USA}},
+    editor = {Kamalika Chaudhuri and
+Ruslan Salakhutdinov},
+    series = {Proceedings of Machine Learning Research},
+    timestamp = {Tue, 11 Jun 2019 01:00:00 +0200},
+    title = {Parameter-Efficient Transfer Learning for {NLP}},
+    year = {2019}
+}
+
+@inproceedings{stickland2019bert,
+    author = {Asa Cooper Stickland and
+Iain Murray},
+    booktitle = {Proceedings of the 36th International Conference on Machine Learning,
+{ICML} 2019, 9-15 June 2019, Long Beach, California, {USA}},
+    editor = {Kamalika Chaudhuri and
+Ruslan Salakhutdinov},
+    series = {Proceedings of Machine Learning Research},
+    timestamp = {Tue, 11 Jun 2019 01:00:00 +0200},
+    title = {{BERT} and PALs: Projected Attention Layers for Efficient Adaptation
+in Multi-Task Learning},
+    year = {2019}
+}
+
+@article{rosenfeld2018incremental,
+    author = {Rosenfeld, Amir and Tsotsos, John K},
+    journal = {IEEE transactions on pattern analysis and machine intelligence},
+    number = {3},
+    title = {Incremental learning through deep adaptation},
+    year = {2018}
+}
+
+@inproceedings{rebuffi2018efficient,
+    author = {Sylvestre{-}Alvise Rebuffi and
+Hakan Bilen and
+Andrea Vedaldi},
+    booktitle = {2018 {IEEE} Conference on Computer Vision and Pattern Recognition,
+{CVPR} 2018, Salt Lake City, UT, USA, June 18-22, 2018},
+    timestamp = {Sun, 25 Oct 2020 01:00:00 +0200},
+    title = {Efficient Parametrization of Multi-Domain Deep Neural Networks},
+    year = {2018}
+}
+
+@inproceedings{alaluf2022hyperstyle,
+    author = {Yuval Alaluf and
+Omer Tov and
+Ron Mokady and
+Rinon Gal and
+Amit Bermano},
+    booktitle = {{IEEE/CVF} Conference on Computer Vision and Pattern Recognition,
+{CVPR} 2022, New Orleans, LA, USA, June 18-24, 2022},
+    timestamp = {Wed, 05 Oct 2022 01:00:00 +0200},
+    title = {HyperStyle: StyleGAN Inversion with HyperNetworks for Real Image Editing},
+    year = {2022}
+}
+
+@inproceedings{dinh2022hyperinverter,
+    author = {Tan M. Dinh and
+Anh Tuan Tran and
+Rang Nguyen and
+Binh{-}Son Hua},
+    booktitle = {{IEEE/CVF} Conference on Computer Vision and Pattern Recognition,
+{CVPR} 2022, New Orleans, LA, USA, June 18-24, 2022},
+    timestamp = {Wed, 05 Oct 2022 01:00:00 +0200},
+    title = {HyperInverter: Improving StyleGAN Inversion via Hypernetwork},
+    year = {2022}
+}
+
+@article{balaji2022ediffi,
+    author = {Balaji, Yogesh and Nah, Seungjun and Huang, Xun and Vahdat, Arash and Song, Jiaming and Kreis, Karsten and Aittala, Miika and Aila, Timo and Laine, Samuli and Catanzaro, Bryan and others},
+    journal = {ArXiv preprint},
+    title = {ediffi: Text-to-image diffusion models with an ensemble of expert denoisers},
+    year = {2022}
+}
+
+@article{xia2023diffir,
+  title={Diffir: Efficient diffusion model for image restoration},
+  author={Xia, Bin and Zhang, Yulun and Wang, Shiyin and Wang, Yitong and Wu, Xinglong and Tian, Yapeng and Yang, Wenming and Van Gool, Luc},
+  journal={ICCV},
+  year={2023}
+}
+
+@inproceedings{yue2023resshift,
+  title={ResShift: Efficient Diffusion Model for Image Super-resolution by Residual Shifting},
+  author={Yue, Zongsheng and Wang, Jianyi and Loy, Chen Change},
+  booktitle={Thirty-seventh Conference on Neural Information Processing Systems},
+  year={2023}
+}
+
+@article{lin2023diffbir,
+    author = {Lin, Xinqi and He, Jingwen and Chen, Ziyan and Lyu, Zhaoyang and Fei, Ben and Dai, Bo and Ouyang, Wanli and Qiao, Yu and Dong, Chao},
+    journal = {ArXiv preprint},
+    title = {DiffBIR: Towards Blind Image Restoration with Generative Diffusion Prior},
+    year = {2023}
+}
+@article{zhang2024magicbrush,
+  title={Magicbrush: A manually annotated dataset for instruction-guided image editing},
+  author={Zhang, Kai and Mo, Lingbo and Chen, Wenhu and Sun, Huan and Su, Yu},
+  journal={Advances in Neural Information Processing Systems},
+  volume={36},
+  year={2024}
+}
+
+@inproceedings{lugmayr2022inpainting,
+    author = {Lugmayr, Andreas and Danelljan, Martin and Romero, Andres and Yu, Fisher and Timofte, Radu and Van Gool, L Repaint},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, CVPR 2022},
+    title = {Inpainting using denoising diffusion probabilistic models}
+}
+
+@article{schuhmann2021laion,
+    author = {Schuhmann, Christoph and Vencu, Richard and Beaumont, Romain and Kaczmarczyk, Robert and Mullis, Clayton and Katta, Aarush and Coombes, Theo and Jitsev, Jenia and Komatsuzaki, Aran},
+    journal = {ArXiv preprint},
+    title = {Laion-400m: Open dataset of clip-filtered 400 million image-text pairs},
+    year = {2021}
+}
+
+@inproceedings{mei2024latent,
+  title={Latent Feature-Guided Diffusion Models for Shadow Removal},
+  author={Mei, Kangfu and Figueroa, Luis and Lin, Zhe and Ding, Zhihong and Cohen, Scott and Patel, Vishal M},
+  booktitle={Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision},
+  pages={4313--4322},
+  year={2024}
+}
+
+@inproceedings{mei2023vidm,
+  title={Vidm: Video implicit diffusion models},
+  author={Mei, Kangfu and Patel, Vishal},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={37},
+  number={8},
+  pages={9117--9125},
+  year={2023}
+}
+
+@inproceedings{ren2023multiscale,
+  title={Multiscale structure guided diffusion for image deblurring},
+  author={Ren, Mengwei and Delbracio, Mauricio and Talebi, Hossein and Gerig, Guido and Milanfar, Peyman},
+  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
+  pages={10721--10733},
+  year={2023}
+}
+
+@inproceedings{whang2022deblurring,
+  title={Deblurring via stochastic refinement},
+  author={Whang, Jay and Delbracio, Mauricio and Talebi, Hossein and Saharia, Chitwan and Dimakis, Alexandros G and Milanfar, Peyman},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={16293--16303},
+  year={2022}
 }

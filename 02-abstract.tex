@@ -2,11 +2,17 @@
 
 
 %%%% your abstract goes here (word limit: 350)
-\Blindtext[3]
+Generative models, such as diffusion models and generative adversarial networks, have recently transformed foundational vision tasks, including generating images from noise. However, challenges remain in designing generative models that are best suited for real-world applications and in improving their generalization capabilities across downstream tasks. This thesis addresses these challenges through comprehensive theoretical analyses and empirical experiments, with a focus on practical visual perception rectification tasks.
 
+First, the thesis investigates the scaling properties of latent diffusion models, widely used in text-to-image generation and its downstream applications. It introduces inference scaling laws that reveal the surprising superiority of small models over large models when leveraging increased inference compute.
+Next, it presents a novel scalable video diffusion model capable of generating continuous scenes from pure noise, extending generative capabilities from static images to dynamic, expressive videos. To further reduce the complexity of designing modality-specific models, the thesis proposes a versatile field diffusion model that can seamlessly handle various modalities, including image, video, 3D, and game environments.
+Additionally, the thesis introduces an efficient diffusion distillation technique that achieves comparable visual quality while reducing computational cost by 99\%, significantly enhancing the sampling efficiency of generative models.
+
+Building on these advancements, the thesis applies realism priors derived from generative models to three real-world image processing tasks: turbulence removal, shadow removal, and single-image super-resolution. These approaches consistently achieve state-of-the-art performance, surpassing traditional regression-based methods and producing results with enhanced realism. This work sets a new benchmark for rectifying visual content while preserving natural details.
+Finally, the thesis explores future directions for advancing generative models toward the ultimate goal of simulating and controlling virtual worlds.
 
 %% list of keywords seperated by comma
-\keywords{Johns Hopkins, PhD, Masters, dissertation, thesis \LaTeX, template.}
+\keywords{Diffusion Models, GAN Inversion, Scaling Laws, Diffusion Distillation, Multi-modal Vision-Language Model, Video Generation, Image Processing}
 
 
 %%%%  committee members (add it right after the abstract w/o page break)
@@ -16,24 +22,24 @@
     %% alternatively you can use minipage environment to put side-by-side
     \section*{Primary reader and thesis advisor}
     
-    Dr. Chuck Darwin \\
+    Dr. Vishal M. Patel \\
     Professor\\
-    Department of Biology\\
+    Department of Electrical and Computer Engineering\\
     Johns Hopkins University, Baltimore MD 
 
 
     \section*{Secondary readers}
     
-    Dr. Stewart Hawking\\
+    Dr. Rama Chellappa\\
     Professor\\
-    Department of Biology \\
+    Department of Electrical and Computer Engineering\\
     Johns Hopkins University, Baltimore, MD 
     
     \vspace{0.1in}
     
-    Dr. Jimmy Watson \\
+    Dr. Alan Yuille\\
     Professor\\
-    Department of Biology \\
+    Department of Computer Science\\
     Johns Hopkins University, Baltimore, MD 
 
     %% you can add more readers if you have them on your committee 

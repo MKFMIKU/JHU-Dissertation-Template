@@ -168,7 +168,7 @@
 
 %%%% package for micro-typography (you can define more settings)
 %% see details here: https://www.khirevich.com/latex/microtype/
-\usepackage[activate={true,nocompatibility}]{microtype}
+\usepackage[nopatch=footnote,activate={true,nocompatibility}]{microtype}
 
 
 
@@ -224,6 +224,10 @@
 \usepackage{tikz}                           % drawing related package
 \usepackage{subcaption}                     % individual panel and caption
 
+\input{math_commands.tex}
+\usepackage{amsmath,amsfonts,bm,amssymb,mathtools,amsthm}
+
+% \usepackage{natbib}
 %% add more packages and/or change options of the packages as needed
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% END LaTeX PACKAGES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -535,7 +539,7 @@
 \DeclareMathOperator{\T}{{\top}}        % transpose of a matrix/ tensor
 \DeclareMathOperator{\tr}{tr}           % trace of a matrix
 \DeclareMathOperator{\divg}{div}        % divergence of vector and tensor
-\DeclareMathOperator{\grad}{grad}       % gradient of vector and tensor
+% \DeclareMathOperator{\grad}{grad}       % gradient of vector and tensor
 \DeclareMathOperator{\curl}{curl}       % curl of vector and tensor
 
 %% theorem-style remark environment (custom)
@@ -575,7 +579,7 @@
 %%%% OPTIONAL but COMMON: preface chapters
 \include{03-dedication}
 \include{04-acknowledgement}        
-\include{05-epigraph}
+% \include{05-epigraph}
 %% you can have other chapters and the order does not matter
 
 
