@@ -210,7 +210,7 @@
 \usepackage[all]{hypcap}                    % for captions on the side of figures
 \usepackage{ifthen}                         % if-then statement in LaTeX code
 \usepackage{lscape}                         % landscape mode
-\usepackage{listings,minted}                % to include codes 
+% \usepackage{listings,minted}                % to include codes 
 \usepackage{csquotes}                       % yet another package to manage quote
 \usepackage{setspace}                       % sets space between lines
 \usepackage{seqsplit}                       % splits long character sequence
@@ -226,6 +226,44 @@
 
 \input{math_commands.tex}
 \usepackage{amsmath,amsfonts,bm,amssymb,mathtools,amsthm}
+
+% Add a period to the end of an abbreviation unless there's one
+% already, then \xspace.
+\RequirePackage{xspace}
+\makeatletter
+\DeclareRobustCommand\onedot{\futurelet\@let@token\@onedot}
+\def\@onedot{\ifx\@let@token.\else.\null\fi\xspace}
+
+\def\eg{\emph{e.g}\onedot} 
+\def\Eg{\emph{E.g}\onedot}
+\def\ie{\emph{i.e}\onedot} 
+\def\Ie{\emph{I.e}\onedot}
+\def\cf{\emph{cf}\onedot} 
+\def\Cf{\emph{Cf}\onedot}
+\def\etc{\emph{etc}\onedot} 
+\def\vs{\emph{vs}\onedot}
+\def\wrt{w.r.t\onedot} 
+\def\dof{d.o.f\onedot}
+\def\iid{i.i.d\onedot} 
+\def\wolog{w.l.o.g\onedot}
+\def\etal{\emph{et al}\onedot}
+\makeatother
+
+\newcommand{\imageWithNote}[3]{%
+  \begin{tikzpicture}
+    % Include the image
+    \node[anchor=south west, inner sep=0] (image) at (0,0) {\includegraphics[width=#1]{#3}};
+    \node[anchor=south east, inner sep=2pt, fill=white] at (current bounding box.south east) {\parbox{.5cm}{#2}};
+  \end{tikzpicture}%
+}
+
+\newcommand{\imageWithMoreNote}[3]{%
+  \begin{tikzpicture}
+    % Include the image
+    \node[anchor=south west, inner sep=0] (image) at (0,0) {\includegraphics[width=#1]{#3}};
+    \node[anchor=south east, inner sep=2pt, fill=white] at (current bounding box.south east) {\parbox{1.4cm}{#2}};
+  \end{tikzpicture}%
+}
 
 % \usepackage{natbib}
 %% add more packages and/or change options of the packages as needed
