@@ -1,0 +1,11 @@
+\noaddvspace 
+\babel@toc {american}{}\relax 
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {2.1}{\ignorespaces We scale the baseline LDM (\emph {i.e}\onedot , \texttt {866M} Stable Diffusion v1.5) by changing the base number of channels $c$ that controls the rest of the U-Net architecture as $[c, 2c, 4c, 4c]$ (See Fig.~\ref {fig:scaling_arch}). GFLOPS are measured for an input latent of shape $64\times 64 \times 4$ with FP32. We also show a normalized running cost with respect to the baseline model. The text-to-image performance (FID and CLIP scores) for all scaled LDMs is evaluated on the COCO-2014 validation set with 30k samples, using 50-step DDIM sampling and Classifier-free Guidance (CFG) with a rate of 7.5. It is worth noting that all the model sizes, and the training and the inference costs reported in this work only refer to the denoising UNet in the latent space, and do not include the \texttt {1.4B} text encoder and the \texttt {250M} latent encoder and decoder. \relax }}{9}{table.caption.7}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {5.1}{\ignorespaces Table to test captions and labels taken from Overleaf.\relax }}{27}{table.caption.21}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }

@@ -1,0 +1,38 @@
+\babel@toc {american}{}\relax 
+\contentsline {chapter}{Abstract}{ii}{chapter*.1}%
+\contentsline {chapter}{Dedication}{iv}{chapter*.2}%
+\contentsline {chapter}{Acknowledgement}{v}{chapter*.3}%
+\contentsline {chapter}{List of Tables}{viii}{section*.4}%
+\contentsline {chapter}{List of Figures}{ix}{section*.5}%
+\contentsline {chapter}{\numberline {1}Introduction and Background}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Diffusion Models}{1}{section.1.1}%
+\contentsline {paragraph}{Diffusion Models.}{1}{section.1.1}%
+\contentsline {paragraph}{Deterministic sampling.}{1}{equation.1.2}%
+\contentsline {paragraph}{Diffusion models parametrizations.}{3}{equation.1.7}%
+\contentsline {chapter}{\numberline {2}Scaling Properties of Latent Diffusion Models}{4}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Introduction}{4}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Summary}{7}{subsection.2.1.1}%
+\contentsline {section}{\numberline {2.2}Scaling LDMs}{8}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Training compute scales text-to-image performance}{9}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Pretraining scales downstream performance}{11}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Scaling sampling-efficiency}{13}{subsection.2.2.3}%
+\contentsline {paragraph}{Analyzing the effect of CFG rate.}{13}{figure.caption.14}%
+\contentsline {paragraph}{Scaling efficiency trends.}{15}{figure.caption.17}%
+\contentsline {paragraph}{Scaling sampling-efficiency in different samplers}{16}{figure.caption.17}%
+\contentsline {subsection}{\numberline {2.2.4}Scaling downstream sampling-efficiency}{18}{subsection.2.2.4}%
+\contentsline {subsection}{\numberline {2.2.5}Scaling sampling-efficiency in distilled LDMs.}{19}{subsection.2.2.5}%
+\contentsline {section}{\numberline {2.3}Conclusion}{21}{section.2.3}%
+\contentsline {chapter}{\numberline {3}Chapter title goes here}{22}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Introduction}{22}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Current approach}{22}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Hypothesis statement}{23}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Experimental evidences}{23}{subsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.2.1}Data analysis}{24}{subsubsection.3.2.2.1}%
+\contentsline {chapter}{\numberline {4}A long chapter title test the distance to the quote}{25}{chapter.4}%
+\contentsline {section}{\numberline {4.1}A long section heading to test the distance before this}{25}{section.4.1}%
+\contentsline {chapter}{\numberline {5}Chapter title goes here}{27}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Introduction}{27}{section.5.1}%
+\contentsline {chapter}{Bibliographic references}{29}{chapter*.22}%
+\renewcommand \cftchappresnum {Appendix\ }
+\contentsline {chapter}{\numberline {A}Some necessary information}{35}{appendix.A}%
+\contentsline {chapter}{\numberline {B}A few more additional information}{37}{appendix.B}%
